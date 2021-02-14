@@ -1,0 +1,51 @@
+@import 'variables';
+
+.custom-pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    @media screen and (max-width: 768px) {
+      display: block;
+      text-align: center;
+    }
+}
+.custom-pagination-controls .custom-select-form {
+    position: absolute;
+    right: 0;
+    @media screen and (max-width: 768px) {
+      position: relative;
+      display: block;
+      text-align: center;
+      font-size: .8rem;
+    }
+    label {
+        color: #2b2d42;
+        padding: 0 .25rem;
+    }
+}
+
+.custom-pagination /deep/ .ngx-pagination .current, .custom-pagination .ngx-pagination li:not(.pagination-next):not(.pagination-previous) a:hover {
+    background: #2b2d42;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .custom-pagination {
+    .ngx-pagination {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+      li.disabled {
+        opacity: .2;
+      }
+      a {
+        color: #2b2d42;
+      }
+      a:hover, button:hover {
+        background: $primary-pink;
+      }
+    }
+  }

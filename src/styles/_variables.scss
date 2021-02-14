@@ -1,0 +1,27 @@
+$white: #7400b8;
+$black: #000;
+$orange: #e63946;
+$green: #caffbf;
+$primary-bg: #bdb2ff;
+$primary-text: #d4a373;
+
+$secondary-bg: darken($primary-bg, 15%);
+$secondary-text: #000;
+
+$primary-pink:  #4895ef;
+$secondary-pink: #560bad;
+
+$primary-green: #16a085;
+$secondary-green: lighten($primary-green, 15%);
+
+$primary-yellow: #fdffb6;;
+$secondary-yellow: lighten($primary-yellow, 15%);
+
+$primary-red: #d90429;
+$secondary-red: lighten($primary-red, 15%);
+
+
+// Font families
+$carrois: 'Carrois Gothic SC', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;

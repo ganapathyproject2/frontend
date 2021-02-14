@@ -1,0 +1,200 @@
+<aside>
+  <div class="sidebar desktop">
+    <nav role="navigation">
+      <ul class="main-links">
+        <li>
+          <a [routerLink]="['/dashboard']" [routerLinkActive]="'active'" title="Dashboard">
+            <span><fa name="cubes"></fa></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/projects']" [routerLinkActive]="'active'" title="Projects">
+            <span><fa name="tasks"></fa></span>
+            <span>Projects</span>
+          </a>
+          <ul class="sub-links">
+            <li>
+              <a [routerLink]="['/project-form']" [routerLinkActive]="'active'" title="Create Project">
+                <span><fa name="plus"></fa></span>
+                <span>Create Project</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['/statistics']" [routerLinkActive]="'active'" title="Statistics">
+            <span><fa name="bar-chart"></fa></span>
+            <span>Statistics</span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/notifications']" [routerLinkActive]="'active'" title="Notifications">
+            <span><fa name="bell-o"></fa></span>
+            <span>Notifications</span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/issues']" [routerLinkActive]="'active'" title="Issues">
+            <span><fa name="bug"></fa></span>
+            <span>Issues</span>
+          </a>
+          <ul class="sub-links">
+            <li>
+              <a [routerLink]="['/issue-form']" [routerLinkActive]="'active'" title="Create Issue">
+                <span><fa name="plus"></fa></span>
+                <span>Create Issue</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['/contact-us']" [routerLinkActive]="'active'" title="Suggestion / Report Problem">
+            <span><fa name="id-card-o"></fa></span>
+            <span>Contact Us</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="profile-links">
+        <li>
+          <a title="profile" class="dropdown">
+            <label for="profile-dropdown">
+              <fa name="user"></fa>
+              <label>{{ username }}</label>
+            </label>
+          </a>
+          <div class="sub-menu">
+            
+            <a (click)="onLogout()">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="bottombar mobile">
+    <nav role="navigation">
+      <ul class="main-links">
+        <li>
+          <a [routerLink]="['/dashboard']" [routerLinkActive]="'active'" title="Dashboard">
+            <span><fa name="cubes"></fa></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <div>
+            <span><fa name="briefcase"></fa></span>
+            <span>Project</span>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a [routerLink]="['/projects']">Projects</a>
+            </li>
+            <li>
+              <a [routerLink]="['/project-form']">Create Project</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div>
+            <span><fa name="bug"></fa></span>
+            <span>Issue</span>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a [routerLink]="['/issues']">Issues</a>
+            </li>
+            <li>
+              <a [routerLink]="['/issue-form']">Create Issue</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div>
+            <span><fa name="user-circle"></fa></span>
+            <span>Profile</span>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a [routerLink]="['/statistics']">Statistics</a>
+            </li>
+            <li>
+              <a [routerLink]="['/notifications']">Notifications</a>
+            </li>
+            
+            <li>
+              <a (click)="onLogout()">Log Out</a>
+            </li>
+          </ul>
+        </li>
+        <li class="other">
+          <div>
+            <span><fa name="briefcase"></fa></span>
+            <span>More</span>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a [routerLink]="['/contact-us']">Contact Us</a>
+            </li>
+            <li>
+              <a [routerLink]="['/overview']">Overview</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="minisidebar laptop">
+    <nav role="navigation">
+      <ul class="main-links">
+        <li>
+          <a [routerLink]="['/dashboard']" [routerLinkActive]="'active'" title="Dashboard">
+            <span><fa name="cubes"></fa></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/projects']" [routerLinkActive]="'active'" title="Projects">
+            <span><fa name="briefcase"></fa></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/statistics']" [routerLinkActive]="'active'" title="Statistics">
+            <span><fa name="bar-chart"></fa></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/notifications']" [routerLinkActive]="'active'" title="Notifications">
+            <span><fa name="bell-o"></fa></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/issues']" [routerLinkActive]="'active'" title="Issues">
+            <span><fa name="bug"></fa></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/issue-form']" [routerLinkActive]="'active'" title="Create Issue">
+            <span><fa name="plus"></fa></span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact-us']" [routerLinkActive]="'active'" title="Suggestion / Report Problem">
+            <span><fa name="id-card-o"></fa></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="profile-links">
+        <li>
+          <a title="profile" class="dropdown">
+            <label for="profile-dropdown">
+              <fa name="user"></fa>
+              <label>{{ username }}</label>
+            </label>
+          </a>
+          <div class="sub-menu">
+            <a (click)="onLogout()">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

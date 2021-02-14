@@ -1,0 +1,9 @@
+@import 'mixins';
+.auth-container {
+  .outer-container {
+    .form fa {
+      width: auto;
+      border: 0px;
+    }
+  }
+}

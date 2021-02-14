@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'mixins';
+
+aside {
+    @include aside();
+    padding: 1rem;
+    .title {
+        text-align: center;
+    }
+    .filters-wrap {
+        margin-top: 1rem;
+        form {
+            display: flex;
+            justify-content: space-evenly;
+            align-content: flex-end;
+            align-items: flex-end;
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+            .action-btn {
+                background: $primary-pink;
+                color: $white;
+                border-radius: .4rem;
+                @media screen and (max-width: 768px) {
+                    margin-top: 1rem;
+                    width: calc(100% - 1rem);
+                    position: relative;
+                    left: .5rem;
+                }
+            }
+            label {
+                color: $white;
+            }
+        }
+        .inputs-wrap {
+            display: flex;
+            & > div {
+                margin: 0 .5rem;
+            }
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .results-wrap {
+        margin: 3rem auto;
+        @media screen and (max-width: 768px) {
+            max-width: 95%;
+        }
+        table {
+            color: darken($primary-bg, 5%);
+        }
+        .table-primary {
+            & > th, & > td {
+              background-color: $secondary-pink;
+              border: 2px solid $primary-pink;
+              color: $black;
+            }
+            th {
+                cursor: pointer;
+            }
+        }
+        a {
+            color: $orange;
+            font-weight: bold;
+        }
+    }
+    .input-box {
+        position: relative;
+    }
+    .input-box span {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 40px;
+        padding: calc(.75rem + 1px);
+        background: $primary-pink;
+        cursor: pointer;
+        text-align: center;
+        fa {
+            color: $white;
+        }
+        &:hover {
+            background: $primary-green;
+        }
+        @media screen and (max-width: 768px) {
+            padding: calc(.5rem + 1px);
+        }
+    }
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+    .search-box {
+        @include formControl();
+        padding: .75rem;
+        margin: .75rem 0;
+        @media screen and (max-width: 768px) {
+            padding: .5rem;
+            margin: .5rem 0;
+        }
+    }
+    .sort-icon fa {
+        opacity: .5;
+    }
+}
